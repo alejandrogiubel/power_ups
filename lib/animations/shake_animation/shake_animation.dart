@@ -40,6 +40,7 @@ class _ShakeAnimationState extends State<ShakeAnimation>
           }
         },
       );
+    widget.onInit.call(_animationController);
     super.initState();
   }
 
