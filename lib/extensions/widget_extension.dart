@@ -8,9 +8,15 @@ extension WidgetExtension on Widget {
     );
   }
 
-  Widget withShakeAnimation(Function(AnimationController) onInit) {
+  Widget withShakeAnimation(
+    Function(AnimationController) onInit, {
+    Duration animationDuration = const Duration(milliseconds: 370),
+    double animationWidth = 10,
+  }) {
     return ShakeAnimation(
       onInit: onInit,
+      animationDuration: animationDuration,
+      animationWidth: animationWidth,
       child: this,
     );
   }
