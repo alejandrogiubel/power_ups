@@ -5,17 +5,23 @@ class ShakeAnimation extends StatefulWidget {
     super.key,
     required this.child,
     required this.onInit,
+    this.animationWidth = 10,
+    this.animationDuration = const Duration(milliseconds: 370),
   });
   final Widget child;
+  final double animationWidth;
+  final Duration animationDuration;
 
   ///This callback return the used AnimationController.
+  ///Them assign this controller to your external controller
+  ///to handle the animation.
+  ///
+  /// To handle the animation just use controller.forward(from: 0.0);
   final Function(AnimationController) onInit;
 
   @override
   State<ShakeAnimation> createState() => _ShakeAnimationState();
 }
-
-const animationWidth = 10.0;
 
 class _ShakeAnimationState extends State<ShakeAnimation>
     with SingleTickerProviderStateMixin {
@@ -25,12 +31,12 @@ class _ShakeAnimationState extends State<ShakeAnimation>
   @override
   void initState() {
     _animationController = AnimationController(
-      duration: const Duration(milliseconds: 370),
+      duration: widget.animationDuration,
       vsync: this,
     );
     _offsetAnim = Tween(
       begin: 0.0,
-      end: animationWidth,
+      end: widget.animationWidth,
     ).chain(CurveTween(curve: Curves.elasticIn)).animate(
           _animationController,
         )..addStatusListener(
@@ -40,6 +46,7 @@ class _ShakeAnimationState extends State<ShakeAnimation>
           }
         },
       );
+    widget.onInit.call(_animationController);
     super.initState();
   }
 
@@ -51,17 +58,16 @@ class _ShakeAnimationState extends State<ShakeAnimation>
 
   @override
   Widget build(BuildContext context) {
-    widget.onInit.call(_animationController);
     return AnimatedBuilder(
       animation: _offsetAnim,
       builder: (context, child) {
         return Container(
-          margin: const EdgeInsets.symmetric(
-            horizontal: animationWidth,
+          margin: EdgeInsets.symmetric(
+            horizontal: widget.animationWidth,
           ),
           padding: EdgeInsets.only(
-            left: _offsetAnim.value + animationWidth,
-            right: animationWidth - _offsetAnim.value,
+            left: _offsetAnim.value + widget.animationWidth,
+            right: widget.animationWidth - _offsetAnim.value,
           ),
           child: widget.child,
         );
