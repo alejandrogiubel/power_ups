@@ -40,7 +40,6 @@ class _ShakeAnimationState extends State<ShakeAnimation>
           }
         },
       );
-    widget.onInit.call(_animationController);
     super.initState();
   }
 
@@ -52,6 +51,7 @@ class _ShakeAnimationState extends State<ShakeAnimation>
 
   @override
   Widget build(BuildContext context) {
+    widget.onInit.call(_animationController);
     return AnimatedBuilder(
       animation: _offsetAnim,
       builder: (context, child) {
