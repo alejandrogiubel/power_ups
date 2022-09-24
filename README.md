@@ -18,11 +18,19 @@ Other features were obtained from stack overflow and others blogs 😅. Thanks t
     - Widget
 
 ## Installation
+Just add this to your `pubspec.yaml`:
 
-Just add this to your pubspec.yaml
 ```yaml
-power_ups:
-  git: https://github.com/alejandrogiubel/power_ups.git
+  dependencies:
+    power_ups: ^0.0.3
+```
+
+Or
+
+```yaml
+  dependencies:
+    power_ups:
+      git: https://github.com/alejandrogiubel/power_ups.git
 ```
 
 ## Usage
