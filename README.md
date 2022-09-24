@@ -59,7 +59,7 @@ ElevatedButton(
 
 * Map with index
 ```dart
-List list = ['apple, banana, mango'];
+List list = ['apple', 'banana', 'mango'];
 list.mapWithIndex(
   (index, value) {
     print(index);
