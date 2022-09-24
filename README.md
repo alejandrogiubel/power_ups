@@ -71,7 +71,7 @@ list.mapWithIndex(
 * String utils
 ```dart
 String name = 'john doe';
-name.inCapitalizeFirst; // John doe
+name.inCapFirst; // John doe
 name.allInCaps; //JOHN DOE
 name.capitalizeFirstOfEach; // John Doe
 ```
