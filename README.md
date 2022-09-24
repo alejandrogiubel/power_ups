@@ -37,7 +37,7 @@ widget.withShakeAnimation(
   (controller) {
     animationController = controller;
   },
-  animationWidth: 5, //Horizontal size of the aniation. Optional. Default 10.
+  animationWidth: 5, //Horizontal size of the animation. Optional. Default 10.
   animationDuration: Duration(milliseconds: 100) //Animation duration. Optional. Default 370 milliseconds.
 ),
 
