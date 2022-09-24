@@ -12,10 +12,18 @@ Other features were obtained from stack overflow and others blogs 😅. Thanks t
     -  Shake animation
 
 *  Extensions
-    -  Duration
-    -  Iterable
-    -  String
-    -  Widget
+    - Duration
+    - Iterable
+    - String
+    - Widget
+
+## Installation
+
+Just add this to your pubspec.yaml
+```yaml
+power_ups:
+  git: https://github.com/alejandrogiubel/power_ups.git
+```
 
 ## Usage
 
