@@ -8,14 +8,14 @@ Other features were obtained from stack overflow and others blogs 😅. Thanks t
 
 ## Features
 * Animations
-    - Reveal animation
-    - Shake animation
+    -  Reveal animation
+    -  Shake animation
 
-* Extensions
-    - Duration
-    - Iterable
-    - String
-    - Widget
+*  Extensions
+    -  Duration
+    -  Iterable
+    -  String
+    -  Widget
 
 ## Usage
 
