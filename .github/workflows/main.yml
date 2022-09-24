@@ -30,3 +30,4 @@ jobs:
           accessToken: secrets.OAUTH_ACCESS_TOKEN
           # (Required) Token from ~/.pub-cache/credentials.json. Use secrets.OAUTH_REFRESH_TOKEN
           refreshToken: secrets.OAUTH_REFRESH_TOKEN
+          skipTests: true
