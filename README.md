@@ -16,6 +16,8 @@ know whether this package might be useful for them.
 
 ## Features
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a6d173097fe840e4bc80ffb914259cb5)](https://app.codacy.com/gh/alejandrogiubel/power_ups?utm_source=github.com&utm_medium=referral&utm_content=alejandrogiubel/power_ups&utm_campaign=Badge_Grade_Settings)
+
 TODO: List what your package can do. Maybe include images, gifs, or videos.
 
 ## Getting started
