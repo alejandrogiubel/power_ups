@@ -1,5 +1,4 @@
 extension StringExtension on String {
-
   ///Capitalize first letter
   String get inCapFirst =>
       isNotEmpty ? '${this[0].toUpperCase()}${substring(1)}' : '';
@@ -11,9 +10,13 @@ extension StringExtension on String {
   String get capitalizeFirstOfEach =>
       split(' ').map<dynamic>((str) => str.inCapFirst).join(' ');
 
-
   ///True if is a valid email
   bool get isEmail => RegExp(
         r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+.[a-zA-Z]+",
       ).hasMatch(this);
+
+  ///Split a string by multiples tokens
+  List<String> multiSplit(Iterable<String> delimeters) => delimeters.isEmpty
+      ? [this]
+      : split(RegExp(delimeters.map(RegExp.escape).join('|')));
 }
