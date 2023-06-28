@@ -51,4 +51,32 @@ extension WidgetExtension on Widget {
       child: this,
     );
   }
+
+  Widget topPadding(double padding) {
+    return Padding(
+      padding: EdgeInsets.only(top: padding),
+      child: this,
+    );
+  }
+
+  Widget bottomPadding(double padding) {
+    return Padding(
+      padding: EdgeInsets.only(bottom: padding),
+      child: this,
+    );
+  }
+
+  Widget leftPadding(double padding) {
+    return Padding(
+      padding: EdgeInsets.only(left: padding),
+      child: this,
+    );
+  }
+
+  Widget rigthPadding(double padding) {
+    return Padding(
+      padding: EdgeInsets.only(right: padding),
+      child: this,
+    );
+  }
 }
