@@ -22,7 +22,7 @@ Just add this to your `pubspec.yaml`:
 
 ```yaml
   dependencies:
-    power_ups: ^0.0.3
+    power_ups: ^0.1.1
 ```
 
 Or
