@@ -1,3 +1,7 @@
+import 'dart:developer' as dev;
+
+import 'package:flutter/foundation.dart';
+
 extension StringExtension on String {
   ///Capitalize first letter
   String get inCapFirst =>
@@ -19,4 +23,16 @@ extension StringExtension on String {
   List<String> multiSplit(Iterable<String> delimeters) => delimeters.isEmpty
       ? [this]
       : split(RegExp(delimeters.map(RegExp.escape).join('|')));
+
+  ///Print in console only in kDebugMode and return the same string
+  String log({String debugName = ''}) {
+    if (kDebugMode) {
+      dev.log(
+        this,
+        name: debugName,
+        // time: DateTime.now(),
+      );
+    }
+    return this;
+  }
 }
