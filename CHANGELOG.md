@@ -1,3 +1,8 @@
+## 1.0.0
+
+* Add expanded and flexible
+* Refactor padding methods name
+
 ## 0.1.1
 
 * Improve documentation

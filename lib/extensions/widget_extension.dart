@@ -28,21 +28,24 @@ extension WidgetExtension on Widget {
     );
   }
 
-  Widget verticalPadding(double padding) {
+  ///Vertical padding
+  Widget vp(double padding) {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: padding),
       child: this,
     );
   }
 
-  Widget horizontalPadding(double padding) {
+  ///Horizontal padding
+  Widget hp(double padding) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: padding),
       child: this,
     );
   }
 
-  Widget symmetricPadding(double verticalPadding, double horizontalPadding) {
+  ///Symmetric padding (vertical padding, horizontal padding)
+  Widget sp(double verticalPadding, double horizontalPadding) {
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: horizontalPadding,
@@ -52,30 +55,54 @@ extension WidgetExtension on Widget {
     );
   }
 
-  Widget topPadding(double padding) {
+  ///Top padding
+  Widget tp(double padding) {
     return Padding(
       padding: EdgeInsets.only(top: padding),
       child: this,
     );
   }
 
-  Widget bottomPadding(double padding) {
+  ///Bottom padding
+  Widget bp(double padding) {
     return Padding(
       padding: EdgeInsets.only(bottom: padding),
       child: this,
     );
   }
 
-  Widget leftPadding(double padding) {
+  ///Left padding
+  Widget lp(double padding) {
     return Padding(
       padding: EdgeInsets.only(left: padding),
       child: this,
     );
   }
 
-  Widget rigthPadding(double padding) {
+  ///Right padding
+  Widget rp(double padding) {
     return Padding(
       padding: EdgeInsets.only(right: padding),
+      child: this,
+    );
+  }
+
+  ///All padding
+  Widget ap(double padding) {
+    return Padding(
+      padding: EdgeInsets.all(padding),
+      child: this,
+    );
+  }
+
+  Widget expanded() {
+    return Expanded(
+      child: this,
+    );
+  }
+
+  Widget flexible() {
+    return Flexible(
       child: this,
     );
   }
