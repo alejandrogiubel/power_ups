@@ -1,18 +1,19 @@
 import 'dart:developer' as dev;
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 
 extension StringExtension on String {
   ///Capitalize first letter
-  String get inCapFirst =>
+  String get capFirst =>
       isNotEmpty ? '${this[0].toUpperCase()}${substring(1)}' : '';
 
   ///Capitalize all letters
-  String get allInCaps => toUpperCase();
+  String get capAll => toUpperCase();
 
   ///Capitalize first letter of each word
-  String get capitalizeFirstOfEach =>
-      split(' ').map<dynamic>((str) => str.inCapFirst).join(' ');
+  String get capFirstOfEach =>
+      split(' ').map<dynamic>((str) => str.capFirst).join(' ');
 
   ///True if is a valid email
   bool get isEmail => RegExp(
@@ -34,5 +35,10 @@ extension StringExtension on String {
       );
     }
     return this;
+  }
+
+  /// Copies the string to the clipboard.
+  Future<void> get sendToClipBoard async {
+    await Clipboard.setData(ClipboardData(text: this));
   }
 }

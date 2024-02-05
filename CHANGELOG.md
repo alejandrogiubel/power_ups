@@ -1,3 +1,11 @@
+## 1.1.0
+* Add sendToClipBoard on String extension
+  
+* Breaking change
+  - inCapFirst => capFirst
+  - inCapsAll => capAll
+  - capitalizeFirstOfEach => capFirstOfEach
+
 ## 1.0.0
 
 * Add expanded and flexible
